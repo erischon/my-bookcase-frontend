@@ -6,7 +6,7 @@ const PropertyDetails = ({ item }) => {
       case "film":
         return "movie";
       case "musique":
-        return "album";
+        return "music_note";
       default:
         return item.propertyType;
     }
@@ -17,14 +17,14 @@ const PropertyDetails = ({ item }) => {
       <img src={item.images[0].url} alt="item.title" />
 
       <h3 className="item-card__title">{item.title}</h3>
-
-      <div className="item-card__infos">
-        <p>{item.rate}</p>
-        <p>{`n° UPC: ${item.upc}`}</p>
-      </div>
       <span className="item-card__type material-symbols-outlined">
         {typeIcon(item.propertyType)}
       </span>
+
+      <div className="item-card__rate">
+        <span className="material-symbols-outlined">star</span>{" "}
+        <span className="">{item.rate}</span>
+      </div>
     </div>
   );
 };

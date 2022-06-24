@@ -1,11 +1,21 @@
 .property-list {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
   gap: 0.5rem;
+  margin: 0 auto;
 }
 
 @media screen and (min-width: 640px) {
   .property-list {
-    grid-template-columns: repeat(2, 1fr);
+    max-width: 640px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .property-list {
+    max-width: 1040px;
   }
 }
