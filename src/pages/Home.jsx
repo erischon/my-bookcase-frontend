@@ -22,8 +22,12 @@ const Home = () => {
 
   return (
     <div className="home">
-      {property &&
-        property.map((item) => <PropertyDetails key={item._id} item={item} />)}
+      <section className="property-list">
+        {property &&
+          property.map((item) => (
+            <PropertyDetails key={item._id} item={item} />
+          ))}
+      </section>
     </div>
   );
 };

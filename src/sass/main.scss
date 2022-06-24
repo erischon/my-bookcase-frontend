@@ -10,4 +10,7 @@
 @import "./layout/header";
 
 // 5. Components
-@import "./components/navbar";
+@import "./components/navbar", "./components/propertyDetails";
+
+// 6. Page-specific styles
+@import "./pages/home";

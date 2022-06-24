@@ -1,18 +1,30 @@
 const PropertyDetails = ({ item }) => {
-  console.log("item:", item);
+  const typeIcon = () => {
+    switch (item.propertyType) {
+      case "livre":
+        return "book";
+      case "film":
+        return "movie";
+      case "musique":
+        return "album";
+      default:
+        return item.propertyType;
+    }
+  };
+
   return (
-    <div className="item-details">
-      <h4>{item.title}</h4>
-      <p>
-        <strong>Type: </strong>
-        {item.propertyType}
-      </p>
-      <p>
-        <strong>UPC </strong>
-        {item.upc}
-      </p>
-      <p>{item.images[0].url}</p>
-      <p>{item.rate}</p>
+    <div className="item-card">
+      <img src={item.images[0].url} alt="item.title" />
+
+      <h3 className="item-card__title">{item.title}</h3>
+
+      <div className="item-card__infos">
+        <p>{item.rate}</p>
+        <p>{`n° UPC: ${item.upc}`}</p>
+      </div>
+      <span className="item-card__type material-symbols-outlined">
+        {typeIcon(item.propertyType)}
+      </span>
     </div>
   );
 };

@@ -1,0 +1,42 @@
+.item-card {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  grid-template-rows: 50px;
+  grid-template-areas:
+    "image title"
+    "image infos";
+
+  background-color: aqua;
+
+  position: relative;
+
+  img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    grid-area: image;
+  }
+
+  &__title {
+    grid-area: title;
+
+    max-width: 100%;
+    padding-left: 0.5rem;
+    font-size: 1.2rem;
+  }
+
+  &__infos {
+    display: flex;
+    grid-area: infos;
+  }
+
+  &__type {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.5rem;
+    font-size: 1rem;
+    background-color: black;
+    color: white;
+  }
+}
