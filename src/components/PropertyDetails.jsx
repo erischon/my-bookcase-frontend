@@ -14,7 +14,7 @@ const PropertyDetails = ({ item }) => {
 
   return (
     <div className="item-card">
-      <img src={item.images[0].url} alt="item.title" />
+      <img src={item.images} alt="item.title" />
 
       <h3 className="item-card__title">{item.title}</h3>
       <span className="item-card__type material-symbols-outlined">
