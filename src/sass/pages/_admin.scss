@@ -1,0 +1,11 @@
+.property-form {
+  margin: 0 auto;
+  max-width: 400px;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+@media screen and (min-width: $breakpoint-sm) {
+  .property-form {
+  }
+}

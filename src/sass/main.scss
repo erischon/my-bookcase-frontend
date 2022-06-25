@@ -7,10 +7,10 @@
 @import "./base/base";
 
 // 4. Layout-related sections
-@import "./layout/header";
+@import "./layout/forms", "./layout/header";
 
 // 5. Components
-@import "./components/navbar", "./components/propertyDetails";
+@import "./components//propertyForm", "./components/propertyDetails";
 
 // 6. Page-specific styles
-@import "./pages/home";
+@import "./pages/home", "./pages/admin";
