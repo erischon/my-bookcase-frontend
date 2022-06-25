@@ -49,18 +49,26 @@ const PropertyForm = () => {
       />
 
       <label>Type:</label>
-      <input
+      <select
         type="text"
         onChange={(e) => setPropertyType(e.target.value)}
         value={propertyType}
-      />
+      >
+        {["livre", "film", "série", "bd", "musique", "jeux vidéo"].map(
+          (propType) => (
+            <option key={propType} value={propType}>
+              {propType}
+            </option>
+          )
+        )}
+      </select>
 
       <label>UPC:</label>
       <input type="text" onChange={(e) => setUpc(e.target.value)} value={upc} />
 
       <label>Image:</label>
       <input
-        type="text"
+        type="file"
         onChange={(e) => setImages(e.target.value)}
         value={images}
       />
