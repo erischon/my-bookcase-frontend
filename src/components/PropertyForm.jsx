@@ -12,13 +12,6 @@ const PropertyForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    uploadImage();
-
-    console.log("imageUrl:", url);
-
-    // const imageUrl = url;
-    // setImages(imageUrl);
-
     const property = { title, propertyType, upc, images, rate };
 
     const response = await fetch("/api/property", {
@@ -46,9 +39,9 @@ const PropertyForm = () => {
     }
   };
 
-  const uploadImage = () => {
+  const uploadImage = (event) => {
     const data = new FormData();
-    data.append("file", images);
+    data.append("file", event.target.files[0]);
     data.append("upload_preset", "property");
     data.append("cloud_name", "dxyabkggp");
     fetch("https://api.cloudinary.com/v1_1/dxyabkggp/image/upload", {
@@ -57,7 +50,7 @@ const PropertyForm = () => {
     })
       .then((resp) => resp.json())
       .then((data) => {
-        setUrl(data.url);
+        setImages(data.url);
       })
       .catch((err) => console.log(err));
   };
@@ -92,7 +85,8 @@ const PropertyForm = () => {
       <input type="text" onChange={(e) => setUpc(e.target.value)} value={upc} />
 
       <label>Image:</label>
-      <input type="file" onChange={(e) => setImages(e.target.files[0])} />
+      <input type="file" onChange={uploadImage} />
+      {/* <input type="file" onChange={(e) => setImages(e.target.files[0])} /> */}
 
       <label>Rate:</label>
       <input
