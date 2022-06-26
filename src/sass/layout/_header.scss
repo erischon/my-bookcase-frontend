@@ -1,8 +1,4 @@
 header {
-  background: black;
-}
-
-header {
   max-width: 1400px;
   margin: 0 auto;
   padding: 10px 20px;
@@ -10,10 +6,32 @@ header {
   align-items: center;
   justify-content: space-between;
 
+  background: black;
+
   .logo {
     font-size: 1.25rem;
     font-weight: 600;
     color: $clr-text;
     text-decoration: none;
+  }
+}
+
+nav {
+  padding-right: 1rem;
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style: none;
+      color: $clr-text;
+
+      a {
+        color: $clr-text;
+        font-size: 0.85rem;
+        text-decoration: none;
+      }
+    }
   }
 }
