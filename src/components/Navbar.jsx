@@ -6,6 +6,13 @@ const Navbar = () => {
       <Link to="/" className="logo">
         My Bookcase
       </Link>
+      <nav>
+        <ul>
+          <li>
+            <Link to="/admin">Admin</Link>
+          </li>
+        </ul>
+      </nav>
     </header>
   );
 };
