@@ -6,13 +6,14 @@ const PropertyForm = () => {
   const [upc, setUpc] = useState("");
   const [images, setImages] = useState("");
   const [rate, setRate] = useState("");
+  const [readingDate, setReadingDate] = useState("");
   const [error, setError] = useState(null);
   const [url, setUrl] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const property = { title, propertyType, upc, images, rate };
+    const property = { title, propertyType, upc, images, rate, readingDate };
 
     const response = await fetch("/api/property", {
       method: "POST",
@@ -33,6 +34,7 @@ const PropertyForm = () => {
       setUpc("");
       setImages("");
       setRate("");
+      setReadingDate("");
       // setUrl("");
       setError(null);
       console.log("New Property added", json);
@@ -93,6 +95,13 @@ const PropertyForm = () => {
         type="number"
         onChange={(e) => setRate(e.target.value)}
         value={rate}
+      />
+
+      <label>Reading Date:</label>
+      <input
+        type="date"
+        onChange={(e) => setReadingDate(e.target.value)}
+        value={readingDate}
       />
 
       <button>Add Property</button>
