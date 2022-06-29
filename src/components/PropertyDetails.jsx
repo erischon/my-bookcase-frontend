@@ -12,6 +12,12 @@ const PropertyDetails = ({ item }) => {
     }
   };
 
+  let date = item.readingDate;
+
+  if (item.readingDate) {
+    date = new Date(item.readingDate);
+  }
+
   return (
     <div className="item-card">
       <img src={item.images} alt="item.title" />
@@ -23,7 +29,9 @@ const PropertyDetails = ({ item }) => {
 
       <div className="item-card__rate">
         <span className="material-symbols-outlined">star</span>{" "}
-        <span className="">{item.rate}</span>
+        <span className="">
+          {item.readingDate ? date.getFullYear() : "Non lu"}
+        </span>
       </div>
     </div>
   );
