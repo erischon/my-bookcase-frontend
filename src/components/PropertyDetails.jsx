@@ -28,10 +28,8 @@ const PropertyDetails = ({ item }) => {
       </span>
 
       <div className="item-card__rate">
-        <span className="material-symbols-outlined">star</span>{" "}
-        <span className="">
-          {item.readingDate ? date.getFullYear() : "Non lu"}
-        </span>
+        <span className="material-symbols-outlined">schedule</span>{" "}
+        <span className=""> {item.readingDate ? date.getFullYear() : ""}</span>
       </div>
     </div>
   );
