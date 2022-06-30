@@ -7,18 +7,11 @@
 
 ### 0.1.0
 
-- 0.1.0-a.2
-    - Backup de la DB
+- 0.1.0-a.3
+    - ajout d’une date (de lecture, de visionnage, d’écoute, …) sur une card
 - 0.1.0-a.1
-    
-    **Backend**
-    
-    - API REST Express
-    - Une Database MongoDB
-    
-    **Frontend**
-    
-    - une barre de navigation
-    - une Homepage avec la liste des Property
-    - une page Admin pour créer un Property
-        - avec hébergement de l’image sur Cloudinary
+    - création
+        - d’une barre de navigation
+        - d’une Homepage avec la liste des Property
+        - d’une page Admin avec un fomulaire de création de property
+            - avec hébergement de l’image sur Cloudinary
