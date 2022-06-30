@@ -27,9 +27,12 @@ const PropertyDetails = ({ item }) => {
         {typeIcon(item.propertyType)}
       </span>
 
-      <div className="item-card__rate">
+      <div className="item-card__date">
         <span className="material-symbols-outlined">schedule</span>{" "}
-        <span className=""> {item.readingDate ? date.getFullYear() : ""}</span>
+        <span className="item-card__date-value">
+          {" "}
+          {item.readingDate ? date.getFullYear() : ""}
+        </span>
       </div>
     </div>
   );
