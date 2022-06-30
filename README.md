@@ -1,5 +1,6 @@
 # My Bookcase Frontend
 
+Une Application pour gérer ses Livres, ses BD, ses Films, ses Séries, ses Musiques, ses Jeux Vidéos, ...
 
 # Versions
 
