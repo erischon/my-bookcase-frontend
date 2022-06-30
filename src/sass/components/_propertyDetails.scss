@@ -30,7 +30,7 @@
     color: $clr-text;
   }
 
-  &__rate {
+  &__date {
     grid-area: rate;
     display: flex;
     justify-content: center;
@@ -43,6 +43,11 @@
 
     span {
       font-size: 0.85rem;
+    }
+
+    .item-card__date-value {
+      font-size: 0.75rem;
+      margin-left: 0.25rem;
     }
   }
 
