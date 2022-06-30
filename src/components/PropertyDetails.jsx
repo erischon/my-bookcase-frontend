@@ -2,11 +2,18 @@ const PropertyDetails = ({ item }) => {
   const typeIcon = () => {
     switch (item.propertyType) {
       case "livre":
-        return "book";
+        return "menu_book";
       case "film":
         return "movie";
+      case "série":
+        return "tv_gen";
+      case "bd":
+        return "draw";
       case "musique":
         return "music_note";
+      case "jeux vidéo":
+        return "sports_esports";
+
       default:
         return item.propertyType;
     }
